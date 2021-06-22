@@ -7,9 +7,9 @@ public class CameraManager : MonoBehaviour
     InputManager inputManager;
     public Transform targetTransform;
     private Vector3 cameraFollowVelocity = Vector3.zero;
-    public float camerafollowSpeed = 0.05f;
-    public float cameralookSpeed = 2f;
-    public float camerapivSpeed = 2f;
+    public float camerafollowSpeed = 0.01f;
+    public float cameralookSpeed = 0.1f;
+    public float camerapivSpeed = 0.1f;
     public Transform cameraPivot;
     public float lookAngle;
     public float pivotAngle;
