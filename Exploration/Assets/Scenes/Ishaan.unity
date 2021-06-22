@@ -434,14 +434,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 712113676}
-  camerafollowSpeed: 0.2
-  cameralookSpeed: 0.3
-  camerapivSpeed: 0.3
+  camerafollowSpeed: 0.05
+  cameralookSpeed: 0.1
+  camerapivSpeed: 0.1
   cameraPivot: {fileID: 2128864632}
   lookAngle: 0
   pivotAngle: 0
-  pivmin: -5
-  pivmax: 35
+  pivmin: -35
+  pivmax: 5
 --- !u!4 &976197348
 Transform:
   m_ObjectHideFlags: 0

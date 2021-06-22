@@ -7,14 +7,14 @@ public class CameraManager : MonoBehaviour
     InputManager inputManager;
     public Transform targetTransform;
     private Vector3 cameraFollowVelocity = Vector3.zero;
-    public float camerafollowSpeed = 0.2f;
+    public float camerafollowSpeed = 0.05f;
     public float cameralookSpeed = 2f;
     public float camerapivSpeed = 2f;
     public Transform cameraPivot;
     public float lookAngle;
     public float pivotAngle;
-    public float pivmin = -5;
-    public float pivmax = 35;
+    public float pivmin = -35;
+    public float pivmax = 5;
 
     private void Awake()
     {
@@ -39,7 +39,7 @@ public class CameraManager : MonoBehaviour
         transform.rotation = targetrotation;
 
         rotation = Vector3.zero;
-        rotation.x = pivotAngle;
+        rotation.x = -pivotAngle;
         targetrotation = Quaternion.Euler(rotation);
         cameraPivot.localRotation = targetrotation;
 
