@@ -598,6 +598,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 483738823920298264, guid: 922e69f9c6bd6254085899ad8db2f206, type: 3}
+      propertyPath: speed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 754348764484375629, guid: 922e69f9c6bd6254085899ad8db2f206, type: 3}
       propertyPath: m_Name
       value: LowPolyMan 1
