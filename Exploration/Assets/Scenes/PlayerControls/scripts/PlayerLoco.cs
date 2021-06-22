@@ -21,7 +21,7 @@ public class PlayerLoco : MonoBehaviour
     [Header("Movement Flags")]
     public bool isGrounded;
 
-    public float speed = 4;
+    public float speed = 7;
     public float rspeed = 10;
 
     private void Awake()

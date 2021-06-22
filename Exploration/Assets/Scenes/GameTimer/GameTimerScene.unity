@@ -494,7 +494,7 @@ GameObject:
   - component: {fileID: 1809881759}
   - component: {fileID: 1809881758}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Timer Textbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -516,8 +516,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 70.649994, y: -25.770004}
-  m_SizeDelta: {x: 141.3001, y: 51.543}
+  m_AnchoredPosition: {x: 54.7207, y: -24.2285}
+  m_SizeDelta: {x: 109.4416, y: 48.4599}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1809881758
 MonoBehaviour:
@@ -552,7 +552,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Timer
 --- !u!222 &1809881759
 CanvasRenderer:
   m_ObjectHideFlags: 0
