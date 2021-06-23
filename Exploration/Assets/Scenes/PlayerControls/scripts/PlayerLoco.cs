@@ -26,7 +26,7 @@ public class PlayerLoco : MonoBehaviour
 
     [Header("Jump Speeds")]
     public float gravityIntensity = -30;
-    public float jumpHeight = 20f;
+    public float jumpHeight = 4f;
 
     private void Awake()
     {
@@ -36,6 +36,7 @@ public class PlayerLoco : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         cameraObject = Camera.main.transform;
     }
+
     private void HandleMovement()
     {
         if (isJumping)
@@ -101,7 +102,9 @@ public class PlayerLoco : MonoBehaviour
     {
         RaycastHit hit;
         Vector3 rayCastorigin = transform.position;
+        Vector3 targetPosition;
         rayCastorigin.y = rayCastorigin.y + rayCastheightoffset;
+        targetPosition = transform.position;
 
         if(!isGrounded && !isJumping)
         {
@@ -121,6 +124,8 @@ public class PlayerLoco : MonoBehaviour
                 animatorControl.PlayTargetAnimation("Landing", true);
             }
 
+            Vector3 rayCastHitpoint = hit.point;
+            targetPosition.y = rayCastHitpoint.y;
             airtimer = 0;
             isGrounded = true;
         }
@@ -128,5 +133,29 @@ public class PlayerLoco : MonoBehaviour
         {
             isGrounded = false;
         }
+
+        if (isGrounded && !isJumping)
+        {
+            if(playerManager.isInteracting || inputManager.moveAmount > 0)
+            {
+                transform.position = Vector3.Slerp(transform.position, targetPosition, Time.deltaTime / 0.1f);
+            }
+            else
+            {
+                transform.position = targetPosition;
+            }
+        }
     }
+
+    public IEnumerator Attack()
+    {
+        if(isGrounded)
+        {
+            animatorControl.animator.SetBool("isAttacking", true);
+            animatorControl.PlayTargetAnimation("Attack", false);
+
+            yield return new WaitForSeconds(0.9f);
+        }
+    }
+
 }
