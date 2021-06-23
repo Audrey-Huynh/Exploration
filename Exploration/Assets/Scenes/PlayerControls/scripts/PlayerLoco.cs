@@ -17,6 +17,7 @@ public class PlayerLoco : MonoBehaviour
     public float leapingVelocity;
     public LayerMask groundLayer;
     public float rayCastheightoffset = 0.5f;
+    public static int iron = 0;
 
     [Header("Movement Flags")]
     public bool isGrounded;
@@ -146,14 +147,30 @@ public class PlayerLoco : MonoBehaviour
         }
     }
 
-    public IEnumerator Attack()
+    public void Craft()
+    {
+        if (isGrounded && iron >= 3)
+        {
+            Debug.Log(++PlayerHealth.playerHealth);
+            Debug.Log(iron -= 3);
+        }
+    }
+    
+    public void Attack()
     {
         if(isGrounded)
         {
             animatorControl.animator.SetBool("isAttacking", true);
             animatorControl.PlayTargetAnimation("Attack", false);
+        }
+    }
 
-            yield return new WaitForSeconds(0.9f);
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("iron"))
+        {
+            Destroy(other.gameObject);
+            Debug.Log("Iron: " + (++iron));
         }
     }
 

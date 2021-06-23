@@ -8,8 +8,8 @@ public class PlayerHealth : MonoBehaviour
     TextMeshProUGUI healthText;
     TextMeshProUGUI endText;
     bool isDead = false;
-    public int playerHealth;
-    public int EnemyDamage;
+    public static int playerHealth = 10;
+    public static int EnemyDamage;
     public GameObject Player;
     
 
