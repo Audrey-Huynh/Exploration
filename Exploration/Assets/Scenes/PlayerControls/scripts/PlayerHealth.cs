@@ -5,17 +5,19 @@ using TMPro;
 
 public class PlayerHealth : MonoBehaviour
 {
-    bool isDead = false;
-    public int playerHealth;
-    public int enemyDamage;
-    public GameObject Player;
     TextMeshProUGUI healthText;
     TextMeshProUGUI endText;
+    bool isDead = false;
+    public int playerHealth;
+    public int EnemyDamage;
+    public GameObject Player;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        healthText = GetComponent<TextMeshProUGUI>();
+     //   healthText = GetComponent<TextMeshProUGUI>();
+     //   endText = GetComponent<TextMeshProUGUI>();
     }
 
 
@@ -32,15 +34,15 @@ public class PlayerHealth : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Enemy"))
             {
-                playerHealth = playerHealth - enemyDamage;
-                healthText.SetText("Health: " + playerHealth);
-                Debug.Log(playerHealth);
+                playerHealth = playerHealth - EnemyDamage;
+        //        healthText.SetText("Health: " + playerHealth);
+                Debug.Log("Health: " + playerHealth);
 
                 if (playerHealth <= 0)
                 {
-                    isDead = true;
-                    endText.SetText("Game Over!");
+        //            endText.SetText("Game Over!");
                     Debug.Log("Game Over!");
+                    isDead = true;
                 }
             }
         }
