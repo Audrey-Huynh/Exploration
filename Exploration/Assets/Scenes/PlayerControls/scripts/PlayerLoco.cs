@@ -151,8 +151,10 @@ public class PlayerLoco : MonoBehaviour
     {
         if (isGrounded && iron >= 3)
         {
-            Debug.Log(++PlayerHealth.playerHealth);
-            Debug.Log(iron -= 3);
+            animatorControl.animator.SetBool("isCrafting", true);
+            animatorControl.PlayTargetAnimation("Craft", false);
+            Debug.Log("Health:  " + ++PlayerHealth.playerHealth);
+            Debug.Log("Iron: " + (iron -=3));
         }
     }
     
