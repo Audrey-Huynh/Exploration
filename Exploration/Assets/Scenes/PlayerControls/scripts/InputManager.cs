@@ -10,13 +10,14 @@ public class InputManager : MonoBehaviour
 
     public Vector2 movementInput;
     public Vector2 cameraInput;
-    private float moveAmount;
+    public float moveAmount;
     public float vertical;
     public float horizontal;
     public float camerax;
     public float cameray;
 
     public bool jump_Input;
+    public bool attack_Input;
 
     private void Awake()
     {
@@ -33,6 +34,7 @@ public class InputManager : MonoBehaviour
             playerControls.PlayerMovement.Movement.performed += i => movementInput = i.ReadValue<Vector2>();
             playerControls.PlayerMovement.Camera.performed += i => cameraInput = i.ReadValue<Vector2>();
             playerControls.PlayerActions.Jump.performed += i => jump_Input = true;
+            playerControls.PlayerActions.Attack.performed += i => attack_Input = true;
         }
 
         playerControls.Enable();
@@ -47,6 +49,7 @@ public class InputManager : MonoBehaviour
     {
         HandleMovementInput();
         HandleJumpInput();
+        HandleAttackInput();
         //handle action input
     }
 
@@ -68,6 +71,15 @@ public class InputManager : MonoBehaviour
         {
             jump_Input = false;
             playerLoco.HandleJumping();
+        }
+    }
+
+    private void HandleAttackInput()
+    {
+        if(attack_Input == true)
+        {
+            attack_Input = false;
+            StartCoroutine(playerLoco.Attack());
         }
     }
 
