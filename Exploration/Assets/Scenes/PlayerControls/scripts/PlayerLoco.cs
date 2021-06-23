@@ -20,9 +20,13 @@ public class PlayerLoco : MonoBehaviour
 
     [Header("Movement Flags")]
     public bool isGrounded;
-
-    public float speed = 4;
+    public bool isJumping;
+    public float speed = 7;
     public float rspeed = 10;
+
+    [Header("Jump Speeds")]
+    public float gravityIntensity = -30;
+    public float jumpHeight = 20f;
 
     private void Awake()
     {
@@ -34,6 +38,9 @@ public class PlayerLoco : MonoBehaviour
     }
     private void HandleMovement()
     {
+        if (isJumping)
+            return;
+
         moveDirection = cameraObject.forward * inputManager.vertical;
         moveDirection = moveDirection + cameraObject.right * inputManager.horizontal;
         moveDirection.Normalize();
@@ -46,6 +53,9 @@ public class PlayerLoco : MonoBehaviour
 
     private void HandleRotation()
     {
+        if (isJumping)
+            return;
+        
         Vector3 targetDirection = Vector3.zero;
         targetDirection = cameraObject.forward * inputManager.vertical;
         targetDirection = targetDirection + cameraObject.right * inputManager.horizontal;
@@ -73,13 +83,27 @@ public class PlayerLoco : MonoBehaviour
         HandleRotation();
     }
 
+    public void HandleJumping()
+    {
+        if(isGrounded)
+        {
+            animatorControl.animator.SetBool("isJumping", true);
+            animatorControl.PlayTargetAnimation("Jump", false);
+
+            float jumpingVelocity = Mathf.Sqrt(-2 * gravityIntensity * jumpHeight);
+            Vector3 playerVelocity = moveDirection;
+            playerVelocity.y = jumpingVelocity;
+            rb.velocity = playerVelocity;
+        }
+    }
+
     private void HandleFallandLand()
     {
         RaycastHit hit;
         Vector3 rayCastorigin = transform.position;
         rayCastorigin.y = rayCastorigin.y + rayCastheightoffset;
 
-        if(!isGrounded)
+        if(!isGrounded && !isJumping)
         {
             if(!playerManager.isInteracting)
             {
