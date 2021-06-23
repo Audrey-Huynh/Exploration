@@ -41,13 +41,12 @@ public class PlayerLoco : MonoBehaviour
     {
         if (isJumping)
             return;
-
         moveDirection = cameraObject.forward * inputManager.vertical;
         moveDirection = moveDirection + cameraObject.right * inputManager.horizontal;
         moveDirection.Normalize();
         moveDirection.y = 0;
         moveDirection = moveDirection * speed;
-
+        
         Vector3 movementVelocity = moveDirection;
         rb.velocity = movementVelocity;
     }
