@@ -391,7 +391,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthText: {fileID: 1681783863}
-  playerHealth: 10
   EnemyDamage: 3
 --- !u!1 &724059421
 GameObject:
@@ -681,10 +680,10 @@ RectTransform:
   m_Father: {fileID: 303782729}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 331.22076, y: 250}
-  m_SizeDelta: {x: -837.5585, y: 48.4599}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -90.779236, y: -57}
+  m_SizeDelta: {x: 158.44153, y: 48.4599}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1681783863
 MonoBehaviour:
