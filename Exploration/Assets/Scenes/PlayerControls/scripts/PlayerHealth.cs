@@ -28,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collision other)
+     void OnCollisionEnter(Collision other)
     {
         if (isDead == false)
         {
