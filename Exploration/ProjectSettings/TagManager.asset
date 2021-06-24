@@ -6,6 +6,7 @@ TagManager:
   tags:
   - iron
   - enemy
+  - Enemy
   layers:
   - Default
   - TransparentFX
