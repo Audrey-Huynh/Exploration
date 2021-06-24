@@ -363,9 +363,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: spawner
       objectReference: {fileID: 0}
+    - target: {fileID: 5535914390275401626, guid: 0dc6ce9af2043bc48a7ec8488f9eb7e7, type: 3}
+      propertyPath: timespawn
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 5535914390275401630, guid: 0dc6ce9af2043bc48a7ec8488f9eb7e7, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5535914390275401630, guid: 0dc6ce9af2043bc48a7ec8488f9eb7e7, type: 3}
       propertyPath: m_LocalPosition.x
