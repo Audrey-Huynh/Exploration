@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public Text HealthText;
     bool isDead = false;
-    public int playerHealth;
+    public static int playerHealth = 10;
     public int EnemyDamage;
     GameObject Player;
     

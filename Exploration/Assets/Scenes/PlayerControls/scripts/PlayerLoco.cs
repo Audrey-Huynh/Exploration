@@ -153,6 +153,7 @@ public class PlayerLoco : MonoBehaviour
         {
             animatorControl.animator.SetBool("isCrafting", true);
             animatorControl.PlayTargetAnimation("Craft", false);
+            ++PlayerHealth.playerHealth;
             Debug.Log("Iron: " + (iron -=3));
         }
     }
