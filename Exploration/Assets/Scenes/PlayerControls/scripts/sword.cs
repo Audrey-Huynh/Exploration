@@ -21,7 +21,7 @@ public class sword : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("enemy"))
+        if(other.gameObject.CompareTag("Enemy"))
         {
             Destroy(other.gameObject);
             Debug.Log("Kills: " + ++kills);

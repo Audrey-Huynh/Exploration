@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public Text HealthText;
     bool isDead = false;
-    public int playerHealth;
+    public static int playerHealth = 10;
     public int EnemyDamage;
     GameObject Player;
     
@@ -34,19 +34,24 @@ public class PlayerHealth : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Enemy"))
             {
-                playerHealth = playerHealth - EnemyDamage;
-                //        healthText.SetText("Health: " + playerHealth);
-                HealthText.GetComponent<Text>().text = "Health: " + playerHealth;
-                Debug.Log("Health: " + playerHealth);
-
-                if (playerHealth <= 0)
-                {
-                    //            endText.SetText("Game Over!");
-                    HealthText.GetComponent<Text>().text = "Game Over!";
-                    Debug.Log("Game Over!");
-                    isDead = true;
-                }
+                SetHealth(playerHealth - EnemyDamage);
             }
         }
     }
+
+    public void SetHealth(int health)
+    {
+        Text text = HealthText.GetComponent<Text>();
+        playerHealth = health;
+        if (playerHealth <= 0)
+        {
+            isDead = true;
+            text.text = "Game Over!";
+        }
+        else
+        {
+            text.text = "Health: " + playerHealth;
+        }
+    }
+
 }
