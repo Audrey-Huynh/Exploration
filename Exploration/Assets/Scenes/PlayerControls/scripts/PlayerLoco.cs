@@ -7,6 +7,7 @@ public class PlayerLoco : MonoBehaviour
     InputManager inputManager;
     AnimatorControl animatorControl;
     PlayerManager playerManager;
+    PlayerHealth healthscript;
     
     Vector3 moveDirection;
     Transform cameraObject;
@@ -34,6 +35,7 @@ public class PlayerLoco : MonoBehaviour
         playerManager = GetComponent<PlayerManager>();
         animatorControl = GetComponent<AnimatorControl>();
         inputManager = GetComponent<InputManager>();
+        healthscript = GetComponent<PlayerHealth>();
         rb = GetComponent<Rigidbody>();
         cameraObject = Camera.main.transform;
     }
@@ -151,7 +153,7 @@ public class PlayerLoco : MonoBehaviour
     {
         if (isGrounded && iron >= 3)
         {
-            Debug.Log(++PlayerHealth.playerHealth);
+            healthscript.SetHealth(++PlayerHealth.playerHealth);
             Debug.Log("Iron: " + (iron -= 3));
             animatorControl.animator.SetBool("isCrafting", true);
             animatorControl.PlayTargetAnimation("Craft", false);
