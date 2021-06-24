@@ -23,7 +23,7 @@ public class PlayerLoco : MonoBehaviour
     [Header("Movement Flags")]
     public bool isGrounded;
     public bool isJumping;
-    public float speed = 7;
+    public float speed = 10;
     public float rspeed = 10;
 
     [Header("Jump Speeds")]
