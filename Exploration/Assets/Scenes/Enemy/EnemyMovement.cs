@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyFollow : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
     //insert player below
     public GameObject player;
@@ -40,15 +40,23 @@ public class EnemyFollow : MonoBehaviour
     }
     void OnCollisionEnter(Collision other)
 	{
+		if (other.gameObject.CompareTag("Arrow"))
+		{
+			health = health - 25;
+			Debug.Log(health);
+		}
+
 		if (other.gameObject.CompareTag("sword"))
 		{
 			health = health - 25;
 			transform.Translate(0, 0, (float)-0.5);
 			Debug.Log(health);
 		}
+
+		if (other.gameObject.CompareTag("Bullet"))
+		{
+			health = health - 20;
+			Debug.Log(health);
+		}
 	}
 }
-
-
-
-
