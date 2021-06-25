@@ -10,7 +10,7 @@ public class EnemyFollow : MonoBehaviour
     float radius = 10;
     float runRadius = 5;
     float runSpeed = 5;
-
+    float health = 50;
     void Start () 
     {
 
@@ -31,6 +31,30 @@ public class EnemyFollow : MonoBehaviour
         }
 
     }
+    void OnCollisionEnter(Collision other)
+	{
+		if (other.gameObject.CompareTag("Arrow"))
+		{
+			health = health - 25;
+			Debug.Log(health);
+		}
+
+		if (other.gameObject.CompareTag("Player"))
+		{
+			player.health = player.health - 20;
+			transform.Translate(0, 0, (float)-0.5);
+			Debug.Log(player.health);
+		}
+
+		if (other.gameObject.CompareTag("Bullet"))
+		{
+			health = health - 20;
+			Debug.Log(health);
+		}
+	}
+}
+
+
 
 }
 

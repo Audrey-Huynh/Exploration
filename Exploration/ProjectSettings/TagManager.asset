@@ -6,7 +6,11 @@ TagManager:
   tags:
   - iron
   - enemy
+<<<<<<< Updated upstream
   - Enemy
+=======
+  - EnemyArrow
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
