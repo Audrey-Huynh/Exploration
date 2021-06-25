@@ -8,8 +8,8 @@ public class EnemyMovement : MonoBehaviour
     public GameObject player;
     PlayerHealth playerHealth;
     float speed = 4;
-    float radius = 10;
-    float runRadius = 5;
+    float radius = 1000;
+    float runRadius = 800;
     float runSpeed = 5;
     float health = 50;
     void Start () 
