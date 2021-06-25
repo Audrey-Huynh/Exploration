@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 640208910}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -156,7 +156,7 @@ MonoBehaviour:
   rayCastheightoffset: 0.5
   isGrounded: 0
   isJumping: 0
-  speed: 7
+  speed: 10
   rspeed: 10
   gravityIntensity: -30
   jumpHeight: 4
@@ -173,7 +173,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthText: {fileID: 0}
-  EnemyDamage: 1
+  KillText: {fileID: 0}
+  IronText: {fileID: 0}
+  EnemyDamage: 10
 --- !u!1001 &2468705675782057347
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -251,15 +253,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400232, guid: c0713cd96b0c2d648a5d7aaddb65c13c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.21712351
+      value: 547
       objectReference: {fileID: 0}
     - target: {fileID: 400232, guid: c0713cd96b0c2d648a5d7aaddb65c13c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.07948208
+      value: 315.1
       objectReference: {fileID: 0}
     - target: {fileID: 400232, guid: c0713cd96b0c2d648a5d7aaddb65c13c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.8468088
+      value: 594
       objectReference: {fileID: 0}
     - target: {fileID: 400232, guid: c0713cd96b0c2d648a5d7aaddb65c13c, type: 3}
       propertyPath: m_LocalRotation.w

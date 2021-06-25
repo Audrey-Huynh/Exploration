@@ -19,6 +19,7 @@ public class PlayerLoco : MonoBehaviour
     public LayerMask groundLayer;
     public float rayCastheightoffset = 0.5f;
     public static int iron = 0;
+    public static int kills = 0;
 
     [Header("Movement Flags")]
     public bool isGrounded;
@@ -39,6 +40,16 @@ public class PlayerLoco : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         cameraObject = Camera.main.transform;
     }
+
+    private void Update()
+    {
+        if(transform.position.y < -17)
+        {
+            PlayerHealth.playerHealth = 0;
+            healthscript.SetHealth(PlayerHealth.playerHealth);
+        }
+    }
+
 
     private void HandleMovement()
     {
@@ -153,8 +164,9 @@ public class PlayerLoco : MonoBehaviour
     {
         if (isGrounded && iron >= 3)
         {
-            healthscript.SetHealth(++PlayerHealth.playerHealth);
-            Debug.Log("Iron: " + (iron -= 3));
+            healthscript.SetHealth(PlayerHealth.playerHealth += 5);
+            iron -= 3;
+            healthscript.SetIron(iron);
             animatorControl.animator.SetBool("isCrafting", true);
             animatorControl.PlayTargetAnimation("Craft", false);
         }
@@ -174,7 +186,8 @@ public class PlayerLoco : MonoBehaviour
         if (other.gameObject.CompareTag("iron"))
         {
             Destroy(other.gameObject);
-            Debug.Log("Iron: " + (++iron));
+            ++iron;
+            healthscript.SetIron(iron);
         }
     }
 

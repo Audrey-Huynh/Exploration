@@ -6,6 +6,7 @@ public class EnemyFollow : MonoBehaviour
 {
     //insert player below
     public GameObject player;
+    PlayerHealth playerHealth;
     float speed = 4;
     float radius = 10;
     float runRadius = 5;
@@ -30,28 +31,24 @@ public class EnemyFollow : MonoBehaviour
             transform.Translate (Vector3.forward * speed * runSpeed * Time.deltaTime); 
         }
 
+        if (health <= 0)
+        {
+            ++PlayerLoco.kills;
+            playerHealth.SetKill(PlayerLoco.kills);
+        }
+
     }
     void OnCollisionEnter(Collision other)
 	{
-		if (other.gameObject.CompareTag("Arrow"))
+		if (other.gameObject.CompareTag("sword"))
 		{
 			health = health - 25;
-			Debug.Log(health);
-		}
-
-		if (other.gameObject.CompareTag("Player"))
-		{
-			health = health - 20;
 			transform.Translate(0, 0, (float)-0.5);
-			Debug.Log(health);
-		}
-
-		if (other.gameObject.CompareTag("Bullet"))
-		{
-			health = health - 20;
 			Debug.Log(health);
 		}
 	}
 }
+
+
 
 
