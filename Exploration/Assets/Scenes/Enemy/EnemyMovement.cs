@@ -48,11 +48,7 @@ public class EnemyMovement : MonoBehaviour
 
 		if (other.gameObject.CompareTag("sword"))
 		{
-<<<<<<< Updated upstream:Exploration/Assets/Scenes/Enemy/EnemyMove+Health.cs
 			health = health - 25;
-=======
-			health = health - 20;
->>>>>>> Stashed changes:Exploration/Assets/Scenes/Enemy/EnemyMovement.cs
 			transform.Translate(0, 0, (float)-0.5);
 			Debug.Log(health);
 		}
@@ -64,11 +60,3 @@ public class EnemyMovement : MonoBehaviour
 		}
 	}
 }
-
-
-
-<<<<<<< Updated upstream:Exploration/Assets/Scenes/Enemy/EnemyMove+Health.cs
-=======
-
->>>>>>> Stashed changes:Exploration/Assets/Scenes/Enemy/EnemyMovement.cs
-
