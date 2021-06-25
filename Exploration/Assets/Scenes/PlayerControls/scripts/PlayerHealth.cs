@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
     public Text KillText;
     public Text IronText;
     bool isDead = false;
-    public static int playerHealth = 10;
+    public static int playerHealth = 100;
     public int EnemyDamage;
     GameObject Player;
     
@@ -20,7 +20,7 @@ public class PlayerHealth : MonoBehaviour
         //   healthText = GetComponent<TextMeshProUGUI>();
         //   endText = GetComponent<TextMeshProUGUI>();
         HealthText.GetComponent<Text>().text = "Health: " + playerHealth;
-        KillText.GetComponent<Text>().text = "Kills: " + sword.kills;
+        KillText.GetComponent<Text>().text = "Kills: " + PlayerLoco.kills;
         IronText.GetComponent<Text>().text = "Iron: " + PlayerLoco.iron;
     }
 
@@ -32,13 +32,18 @@ public class PlayerHealth : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
         if (isDead == false)
         {
-            if (other.gameObject.CompareTag("Enemy"))
+            if (other.gameObject.CompareTag("EnemyArrow"))
             {
-                SetHealth(playerHealth - EnemyDamage);
+                SetHealth(playerHealth - 15);
+            }
+
+            if(other.gameObject.CompareTag("enemy"))
+            {
+                SetHealth(playerHealth = 10);
             }
         }
     }
@@ -61,15 +66,15 @@ public class PlayerHealth : MonoBehaviour
     public void SetKill(int kill)
     {
         Text ktext = KillText.GetComponent<Text>();
-        
-       
+        PlayerLoco.kills = kill;
+        ktext.text = "Kills: " + kill;
     }
 
     public void SetIron(int irons)
     {
         Text itext = IronText.GetComponent<Text>();
-
-
+        PlayerLoco.iron = irons;
+        itext.text = "Iron: " + irons;
     }
 
 }
