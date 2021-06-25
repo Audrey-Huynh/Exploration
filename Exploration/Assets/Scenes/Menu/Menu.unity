@@ -6212,7 +6212,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1352563812
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6897,7 +6897,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1836801909
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7193,8 +7193,9 @@ MonoBehaviour:
     on mouse\r\n    Collect iron: Run into invisible material spawner which generates
     iron every 60 seconds\r\n    Craft (armor): Press 'q' key (this uses up 3 iron
     to craft 1 armor, which adds 1 to health each time)\r\n\nIn-game Actions -\r\n   
-    View game timer: Look on the top left section of game screen\r\n    Pause game:
-    Click the pause button\r\n    Quit game: Inside the pause menu, click on quit\r"
+    View game timer, health, kills, & iron: Look on the top left section of game
+    screen\r\n    Pause game: Click the pause button\r\n    Quit game: Inside the
+    pause menu, click on quit\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
