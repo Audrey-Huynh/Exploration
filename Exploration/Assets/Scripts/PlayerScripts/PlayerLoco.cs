@@ -190,5 +190,4 @@ public class PlayerLoco : MonoBehaviour
             healthscript.SetIron(iron);
         }
     }
-
 }

@@ -30,6 +30,12 @@ public class Countdown : MonoBehaviour
         {
             StartCoroutine(TimerTake());
         }
+
+        if(secondsLeft == 0 && minutesLeft ==0)
+        {
+            FindObjectOfType<GameManager>().Win();
+        }
+
     }
 
     IEnumerator TimerTake()
