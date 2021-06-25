@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1709,6 +1709,14 @@ PrefabInstance:
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2082981004, guid: da5a831b815a80b44ba4a7d3f07ff00f, type: 3}
+      propertyPath: IronText
+      value: 
+      objectReference: {fileID: 1825275080}
+    - target: {fileID: 2082981004, guid: da5a831b815a80b44ba4a7d3f07ff00f, type: 3}
+      propertyPath: KillText
+      value: 
+      objectReference: {fileID: 678143007}
     - target: {fileID: 2082981004, guid: da5a831b815a80b44ba4a7d3f07ff00f, type: 3}
       propertyPath: HealthText
       value: 
