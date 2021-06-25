@@ -19,6 +19,7 @@ public class InputManager : MonoBehaviour
     public bool jump_Input;
     public bool attack_Input;
     public bool craft_Input;
+    public bool pause_Input;
 
     private void Awake()
     {
@@ -37,6 +38,7 @@ public class InputManager : MonoBehaviour
             playerControls.PlayerActions.Jump.performed += i => jump_Input = true;
             playerControls.PlayerActions.Attack.performed += i => attack_Input = true;
             playerControls.PlayerActions.Craft.performed += i => craft_Input = true;
+            playerControls.PlayerActions.Pause.performed += i => pause_Input = true;
         }
 
         playerControls.Enable();
@@ -53,6 +55,7 @@ public class InputManager : MonoBehaviour
         HandleJumpInput();
         HandleAttackInput();
         HandleCraftInput();
+        HandlePauseInput();
     }
 
     private void HandleMovementInput()
@@ -91,6 +94,15 @@ public class InputManager : MonoBehaviour
         {
             craft_Input = false;
             playerLoco.Craft();
+        }
+    }
+
+    private void HandlePauseInput()
+    {
+        if(pause_Input == true)
+        {
+            pause_Input = false;
+            
         }
     }
 
