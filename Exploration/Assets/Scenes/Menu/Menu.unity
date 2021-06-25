@@ -1017,7 +1017,7 @@ GameObject:
   - component: {fileID: 1230268473}
   - component: {fileID: 1230268472}
   m_Layer: 5
-  m_Name: ControlsButtonText (TMP)
+  m_Name: HowToPlayButtonText (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1062,7 +1062,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Controls
+  m_text: How to Play
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2af196c3adc98c04b835b55edfa1f30b, type: 2}
   m_sharedMaterial: {fileID: -4831003967624303809, guid: 2af196c3adc98c04b835b55edfa1f30b, type: 2}
@@ -6263,7 +6263,7 @@ GameObject:
   - component: {fileID: 1363373835}
   - component: {fileID: 1363373834}
   m_Layer: 5
-  m_Name: Controls Button
+  m_Name: How to Play Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6286,8 +6286,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 160.1961, y: 126}
-  m_SizeDelta: {x: 229.9822, y: 79.1889}
+  m_AnchoredPosition: {x: 207.046, y: 126}
+  m_SizeDelta: {x: 323.681, y: 79.189}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1363373834
 MonoBehaviour:
@@ -6407,7 +6407,7 @@ GameObject:
   - component: {fileID: 1520854167}
   - component: {fileID: 1520854166}
   m_Layer: 5
-  m_Name: Controls Title
+  m_Name: How to Play Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6452,7 +6452,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Player Controls
+  m_text: How to Play
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6892,7 +6892,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1836801909}
   m_Layer: 5
-  m_Name: Controls Menu
+  m_Name: How to Play Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7140,7 +7140,7 @@ GameObject:
   - component: {fileID: 2137950679}
   - component: {fileID: 2137950678}
   m_Layer: 5
-  m_Name: ControlsBodyText (TMP)
+  m_Name: How to Play body text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7162,8 +7162,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -49.5}
-  m_SizeDelta: {x: 523.2967, y: 249.6563}
+  m_AnchoredPosition: {x: 0.000013649, y: -40}
+  m_SizeDelta: {x: 674.197, y: 288.943}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2137950678
 MonoBehaviour:
@@ -7185,21 +7185,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Move/Run: Press ''w'',''a'',''s'', & ''d'' keys
-
-
-    Jump: Press Space
-    Bar
-
-
-    Attack: Left-click on mouse
-
-
-    Craft Armor: Press ''q'' key
-
-
-    Rotate
-    Player Position & Camera: Move mouse'
+  m_text: "Goal: -\n    You are the last person alive in your fort. Your objective
+    is to survive waves of enemy attacks for 15 minutes until reinforcements come
+    to your aid.\r\n\nPlayer Movement -\r\n    Run: Press \u2018w\u2019, \u2018a\u2019,
+    \u2018s\u2019, & \u2018d\u2019 keys\r\n    Jump: Press space bar\r\n    Rotate
+    camera & player position: Move mouse\r\n\nPlayer Actions -\r\n    Attack: Left-click
+    on mouse\r\n    Collect iron: Run into material spawner which generates iron
+    every 60 seconds\r\n    Craft (armor): Press q (the player can use up 3 iron
+    to craft 1 armor, which adds 1 to health)\r\n\nIn-game Actions -\r\n    View
+    game timer: Look on the top left section of game screen\r\n    Pause game: Click
+    the pause button\r\n    Quit game: Inside the pause menu, click on quit\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7226,8 +7221,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
