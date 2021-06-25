@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyFollow : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
     //insert player below
     public GameObject player;
@@ -48,7 +48,11 @@ public class EnemyFollow : MonoBehaviour
 
 		if (other.gameObject.CompareTag("sword"))
 		{
+<<<<<<< Updated upstream:Exploration/Assets/Scenes/Enemy/EnemyMove+Health.cs
 			health = health - 25;
+=======
+			health = health - 20;
+>>>>>>> Stashed changes:Exploration/Assets/Scenes/Enemy/EnemyMovement.cs
 			transform.Translate(0, 0, (float)-0.5);
 			Debug.Log(health);
 		}
@@ -63,4 +67,8 @@ public class EnemyFollow : MonoBehaviour
 
 
 
+<<<<<<< Updated upstream:Exploration/Assets/Scenes/Enemy/EnemyMove+Health.cs
+=======
+
+>>>>>>> Stashed changes:Exploration/Assets/Scenes/Enemy/EnemyMovement.cs
 
