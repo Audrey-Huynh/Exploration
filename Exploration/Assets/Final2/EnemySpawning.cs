@@ -20,8 +20,8 @@ public class EnemySpawning : MonoBehaviour
         {
             xPos = Random.Range(1, 50);
             zPos = Random.Range(1, 31);
-            Instantiate(Enemy, new Vector3(xPos, 43, zPos), Quaternion.identity);
-            yield return new WaitForSeconds(0.1f);
+            Instantiate(Enemy, new Vector3(xPos, 44, zPos), Quaternion.identity);
+            yield return new WaitForSeconds(0.2f);
             enemyCount += 1;
         }
     }
