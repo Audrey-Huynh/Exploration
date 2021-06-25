@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
     public Text HealthText;
+    public Text KillText;
     bool isDead = false;
     public static int playerHealth = 10;
     public int EnemyDamage;
@@ -18,6 +19,7 @@ public class PlayerHealth : MonoBehaviour
         //   healthText = GetComponent<TextMeshProUGUI>();
         //   endText = GetComponent<TextMeshProUGUI>();
         HealthText.GetComponent<Text>().text = "Health: " + playerHealth;
+        KillText.GetComponent<Text>().text = "Kills: " + sword.kills;
     }
 
 
@@ -52,6 +54,13 @@ public class PlayerHealth : MonoBehaviour
         {
             text.text = "Health: " + playerHealth;
         }
+    }
+
+    public void SetKill(int kill)
+    {
+        Text ktext = KillText.GetComponent<Text>();
+        
+       
     }
 
 }
