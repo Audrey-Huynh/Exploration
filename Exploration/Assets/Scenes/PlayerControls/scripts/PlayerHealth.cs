@@ -56,6 +56,7 @@ public class PlayerHealth : MonoBehaviour
         {
             isDead = true;
             text.text = "Game Over!";
+            FindObjectOfType<GameManager>().EndGame();
         }
         else
         {
