@@ -7189,12 +7189,12 @@ MonoBehaviour:
     is to survive waves of enemy attacks for 15 minutes until reinforcements come
     to your aid.\r\n\nPlayer Movement -\r\n    Run: Press \u2018w\u2019, \u2018a\u2019,
     \u2018s\u2019, & \u2018d\u2019 keys\r\n    Jump: Press space bar\r\n    Rotate
-    camera & player position: Move mouse\r\n\nPlayer Actions -\r\n    Attack: Left-click
-    on mouse\r\n    Collect iron: Run into material spawner which generates iron
-    every 60 seconds\r\n    Craft (armor): Press q (the player can use up 3 iron
-    to craft 1 armor, which adds 1 to health)\r\n\nIn-game Actions -\r\n    View
-    game timer: Look on the top left section of game screen\r\n    Pause game: Click
-    the pause button\r\n    Quit game: Inside the pause menu, click on quit\r"
+    camera around player: Move mouse\r\n\nPlayer Actions -\r\n    Attack: Left-click
+    on mouse\r\n    Collect iron: Run into invisible material spawner which generates
+    iron every 60 seconds\r\n    Craft (armor): Press 'q' key (this uses up 3 iron
+    to craft 1 armor, which adds 1 to health each time)\r\n\nIn-game Actions -\r\n   
+    View game timer: Look on the top left section of game screen\r\n    Pause game:
+    Click the pause button\r\n    Quit game: Inside the pause menu, click on quit\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
