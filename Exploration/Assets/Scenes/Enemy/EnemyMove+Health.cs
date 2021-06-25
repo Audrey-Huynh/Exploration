@@ -41,9 +41,9 @@ public class EnemyFollow : MonoBehaviour
 
 		if (other.gameObject.CompareTag("Player"))
 		{
-			player.health = player.health - 20;
+			health = health - 20;
 			transform.Translate(0, 0, (float)-0.5);
-			Debug.Log(player.health);
+			Debug.Log(health);
 		}
 
 		if (other.gameObject.CompareTag("Bullet"))
@@ -54,7 +54,4 @@ public class EnemyFollow : MonoBehaviour
 	}
 }
 
-
-
-}
 

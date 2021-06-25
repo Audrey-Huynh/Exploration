@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public Text HealthText;
     public Text KillText;
+    public Text IronText;
     bool isDead = false;
     public static int playerHealth = 10;
     public int EnemyDamage;
@@ -20,6 +21,7 @@ public class PlayerHealth : MonoBehaviour
         //   endText = GetComponent<TextMeshProUGUI>();
         HealthText.GetComponent<Text>().text = "Health: " + playerHealth;
         KillText.GetComponent<Text>().text = "Kills: " + sword.kills;
+        IronText.GetComponent<Text>().text = "Iron: " + PlayerLoco.iron;
     }
 
 
@@ -61,6 +63,13 @@ public class PlayerHealth : MonoBehaviour
         Text ktext = KillText.GetComponent<Text>();
         
        
+    }
+
+    public void SetIron(int irons)
+    {
+        Text itext = IronText.GetComponent<Text>();
+
+
     }
 
 }
