@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     
     public void Win()
     {
-        SceneManager.LoadScene("Victory");
+        SceneManager.LoadScene("VictoryScreen");
     }
 
 }

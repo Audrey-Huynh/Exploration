@@ -41,7 +41,7 @@ public class PlayerHealth : MonoBehaviour
                 SetHealth(playerHealth - 15);
             }
 
-            if(other.gameObject.CompareTag("enemy"))
+            if(other.gameObject.CompareTag("Enemy"))
             {
                 SetHealth(playerHealth = 10);
             }
